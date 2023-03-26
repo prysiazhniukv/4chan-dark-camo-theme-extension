@@ -15,12 +15,15 @@ function removeTheme() {
 // Update this CSS with your desired theme styling targeting 4chan's elements and classes
 const themeCss = `
   /* Dark theme CSS rules for 4chan */
-  .boardBanner, .navLinks, .boardTitle, .thread, .reply, .linkButton, .pageSwitch, .box-outer, .boxcontent, #ft, #whatis, #header {
+  .navLinks, .thread, .reply, .linkButton, .pageSwitch, .box-outer, .boxcontent, #ft, #whatis, #header {
     background-color: #1d1f21 !important;
     color: #c5c8c6 !important;
   }
+  .boardTitle {
+  background-color: transparent;
+}
 
-    body {
+    body, .boardBanner {
     background: #1d1f21 url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn.wallpapersafari.com%2F26%2F54%2FGwz10q.jpg&f=1&nofb=1&ipt=51056c71b81332ee3250b366a7e52bbd50c0f007f95fa60877a8e8218db0f607&ipo=images) top repeat-x !important;
     color: #c5c8c6 !important;
   }
@@ -75,5 +78,4 @@ const themeCss = `
 const styleElement = document.createElement('style');
 styleElement.innerHTML = themeCss;
 document.head.appendChild(styleElement);
-
 
